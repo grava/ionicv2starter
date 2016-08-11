@@ -1,0 +1,12 @@
+ion-header
+    ion-navbar
+        button(menuToggle)
+            ion-icon(name='menu')
+        ion-title My first list
+ion-content
+    ion-list
+        button(ion-item, *ngFor="let item of items", (click)='itemTapped($event, item)')
+            ion-icon(name="{{item.icon}}", item-left)
+              {{item.title}}
+            div.item-note(item-right) {{item.note}}
+    div(padding, *ngIf="selectedItem") You navigated here from <b>{{selectedItem.title}}</b> 

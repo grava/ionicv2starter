@@ -1,0 +1,7 @@
+ion-menu([content]="content")
+    ion-toolbar
+        ion-title Pages
+    ion-content
+        ion-list
+            button(ion-item='ion-item', *ngFor='let p of pages', (click)='openPage(p)') {{p.title}}
+ion-nav#nav([root]="rootPage", #content, swipeBackEnabled="false")
